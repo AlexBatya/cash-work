@@ -1,0 +1,207 @@
+body, h1, h2, h3, h4, h5, p{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    // overflow-x: hidden;
+}
+
+header{
+    // width: 100vw;
+    height: 80px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
+    .header__body{
+        // width: 100%;
+        height: 100%;
+        &__container{
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .logo{
+                padding-bottom: 8px;
+                img{
+                    width: 220px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+
+main{
+    form{
+        max-width: 470px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        // gap: 15px;
+        h1{
+            text-align: center;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: #333;
+            text-transform: none;
+            // margin-bottom: 14px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 17px;
+            color: #333333;
+            margin-bottom: 8px;
+            span{
+                font-weight: 700;
+            }
+        }
+        .colorSpan{
+            color: #49505796;
+        }
+        .inputForm{
+            position: relative;
+            margin-bottom: 15px;
+            p.error{
+                font-size: 14px;
+                line-height: 17px;
+                color: #E43232;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            .discont{
+                position: absolute;
+                right: 9px;
+                top: 16px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                color: #fff;
+                background: #9FCEAC;
+                border-radius: 20px;
+                padding: 3px 11px;
+            }
+            .error{
+                font-size: 14px;
+                line-height: 17px;
+                color: #E43232;
+                margin: 5px 0;
+            }
+        }
+
+        .oferta{
+            margin: 10px 0 20px 0;
+            position: relative;
+            cursor: pointer;
+            padding-left: 38px;
+            line-height: 13px;
+            display: inline-block;
+            .checkbox-text{
+                small{
+                    font-size: 11px;
+                    line-height: 13px;
+                    color: #444444;
+                }
+            }
+        }
+        
+        .oferta::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 34px;
+            height: 34px;
+            border: 1px solid #808080;
+            // background: #DCDCDC;
+            z-index: 1;
+            border: 1px solid #BAC1C8;
+            width: 21px;
+            height: 21px;
+            border-radius: 4px;
+            background: #fff;
+        }
+        .oferta::after{
+            content: '';
+        }
+        .oferta.active::after{
+            content: '';
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            background: url('../img/checkbox.svg') top / cover no-repeat;
+            // background-repeat: no-repeat;
+            // background-position: center;
+            top: 7px;
+            left: 6px;
+            // display: block;
+            z-index: 2;
+        }
+
+        .btm{
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 30px;
+            // max-width: 270px;
+            padding: 0 38px;
+            color: white;
+            background-color: black;
+            align-self: center;
+            line-height: 50px !important;
+            font-size: 22px;
+            font-weight: 700;
+        }
+        .sicur{
+            margin-top: 23px;
+            max-width: 270px;
+            display: flex;
+            justify-content: space-between;
+            align-self: center;
+            p{
+                font-size: 12px;
+                line-height: 15px;
+                color: #444444;
+            }
+            img{
+                margin-right: 10px;
+                max-width: 30px;
+                max-height: 30px;
+            }
+        }
+    }
+}
+
+footer{
+    height: 843px;
+    .footer__body{
+        &__container{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            h3{
+                margin: 50px 0 0 0;
+            }
+            p{
+                margin: 70px 0 0 0; 
+                font-size: 1em;
+                font-style: normal;
+                font-weight: normal;
+                color: #20272B;
+            }
+        }
+    }
+}

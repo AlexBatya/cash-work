@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первый заём под 0%</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    
+    <header>
+        <div class="header__body">
+            <div class="header__body__container container">
+                <a class = 'logo' href="#">
+                    <img src="./img/logo.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <main class = 'container'>
+        <form action="" >
+            <h1>Заполните заявку</h1>
+            <div class="form-floating inputForm">
+                <input class="form-control phone" id="floatingInput" placeholder="Телефон" type="text">
+                <label for="floatingInput"><span class = 'colorSpan'>Телефон</span></label>
+                <div id = 'phone' class="discont">+15%</div>
+            </div>
+            <div class="form-floating inputForm">
+                <input class="form-control name" id="floatingInput" placeholder="Имя" type="text">
+                <label for="floatingInput"><span class = 'colorSpan'>Имя</span></label>
+                <div id = 'name' class="discont">+10%</div>
+                <p class = 'error'></p>
+            </div>
+            <div class="form-floating inputForm">
+                <input class="form-control lastname" id="floatingInput" placeholder="Фамилия" type="text">
+                <label for="floatingInput"><span class = 'colorSpan'>Фамилия</span></label>
+                <div id = 'lastname' class="discont">+10%</div>
+                <p class = 'error'></p>
+            </div>
+            <div class="form-floating inputForm">
+                <input class="form-control othe" id="floatingInput" placeholder="Отчество" type="text">
+                <label for="floatingInput"><span class = 'colorSpan'>Отчество</span></label>
+                <div id = 'othe' class="discont">+10%</div>
+                <p class = 'error'></p>
+            </div>
+            <div class="form-floating inputForm">
+                <input class="form-control date" id="floatingInput" placeholder="Дата рождения" type="text">
+                <label for="floatingInput"><span class = 'colorSpan'>Дата рождения</span></label>
+                <p class = 'error'></p>
+            </div>
+            <p>Необязательно, но увеличит <br>
+                вероятность одобрения на <span>16%</span> 
+            </p>
+            <div class="form-floating inputForm">
+                <input class="form-control email" id="floatingInput" placeholder="Email" type="text">
+                <label for="floatingInput"><span class = 'colorSpan'>Email</span></label>
+                <div id = 'email' class="discont">+16%</div>
+                <p class = 'error'></p>
+            </div>
+            <label class = 'oferta' for="">
+                <div class="checkbox-text">
+                    <small>
+                        Мне исполнилось 18 лет, я согласен с договором публичной оферты и даю согласие на обработку персональных данных, получение рекламных материалов
+                    </small>
+                </div>
+            </label>
+            <button class = 'btm'>Оформить заказ</button>
+            <div class="sicur">
+                <img src="./img/sicur.svg" alt="">
+                <p>Все данные надежно защищены:
+                    Защищенное соединение
+                </p>
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <hr style = 'opacity: 0.5;'>
+        <div class="footer__body">
+            <div class="footer__body__container container">
+                <h3>
+                    >
+                </h3>
+                <p>* У пользователей сервиса есть возможность получить займ с минимальной процентной ставкой 0%. Подробности при выборе персонального предложения. Займ у партнеров выдается в российских рублях гражданам Российской Федерации, на банковский счет, на карту или наличными. Минимальная сумма займа: 1 000 рублей. Максимальная сумма займа: 60 000 рублей. Процентная ставка: от 0% годовых до 657% годовых, срок займа от 1 до 365 дней включительно. Компания является оператором персональных данных. Сервис оказывает платные услуги по подбору кредитных продуктов для клиентов, а именно предлагает клиенту список предложений кредитных учреждений и прочих финансовых организаций, в которые клиент может обратиться с целью оформления заявки на кредитный продукт. Сервис не является банком или кредитором, не относится к финансовым учреждениям и не несёт ответственности за последствия любых заключенных договоров кредитования или условия по ним. Минимальная процентная ставка у некоторых партнеров составляет 0%. Чтобы оформить заявку на получение займа, необходимо заполнить анкету на сайте проекта.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src = './js/jquery.maskedinput.min.js'></script>
+    <script src = './js/index.js'></script>
+</body>
+</html>
