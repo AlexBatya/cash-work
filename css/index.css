@@ -134,7 +134,17 @@ main form .oferta {
 main form .oferta .checkbox-text small {
   font-size: 11px;
   line-height: 13px;
-  color: #444444;
+  color: #565656;
+}
+
+main form .oferta .checkbox-text small .ofertaLink {
+  color: #565656;
+  font-weight: 500;
+}
+
+main form .oferta .checkbox-text small .ofertaLink:hover {
+  color: black;
+  text-decoration: underline;
 }
 
 main form .oferta::before {

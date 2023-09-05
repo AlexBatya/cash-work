@@ -113,7 +113,15 @@ main{
                 small{
                     font-size: 11px;
                     line-height: 13px;
-                    color: #444444;
+                    color: #565656;
+                    .ofertaLink{
+                        color: #565656;
+                        font-weight: 500;
+                    }
+                    .ofertaLink:hover{
+                        color: black;
+                        text-decoration: underline;
+                    }
                 }
             }
         }
