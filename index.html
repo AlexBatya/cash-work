@@ -24,30 +24,33 @@
         <form action="" >
             <h1>Заполните заявку</h1>
             <div class="form-floating inputForm">
-                <input class="form-control phone" id="floatingInput" placeholder="Телефон" type="text">
+                <input required class="form-control phone" id="floatingInput" placeholder="Телефон" type="text">
                 <label for="floatingInput"><span class = 'colorSpan'>Телефон</span></label>
                 <div id = 'phone' class="discont">+15%</div>
             </div>
+
             <div class="form-floating inputForm">
-                <input class="form-control name" id="floatingInput" placeholder="Имя" type="text">
-                <label for="floatingInput"><span class = 'colorSpan'>Имя</span></label>
-                <div id = 'name' class="discont">+10%</div>
-                <p class = 'error'></p>
-            </div>
-            <div class="form-floating inputForm">
-                <input class="form-control lastname" id="floatingInput" placeholder="Фамилия" type="text">
+                <input required class="form-control lastname" id="floatingInput" placeholder="Фамилия" type="text">
                 <label for="floatingInput"><span class = 'colorSpan'>Фамилия</span></label>
                 <div id = 'lastname' class="discont">+10%</div>
                 <p class = 'error'></p>
             </div>
+
             <div class="form-floating inputForm">
-                <input class="form-control othe" id="floatingInput" placeholder="Отчество" type="text">
+                <input required class="form-control name" id="floatingInput" placeholder="Имя" type="text">
+                <label for="floatingInput"><span class = 'colorSpan'>Имя</span></label>
+                <div id = 'name' class="discont">+10%</div>
+                <p class = 'error'></p>
+            </div>
+            
+            <div class="form-floating inputForm">
+                <input required class="form-control othe" id="floatingInput" placeholder="Отчество" type="text">
                 <label for="floatingInput"><span class = 'colorSpan'>Отчество</span></label>
                 <div id = 'othe' class="discont">+10%</div>
                 <p class = 'error'></p>
             </div>
             <div class="form-floating inputForm">
-                <input class="form-control date" id="floatingInput" placeholder="Дата рождения" type="text">
+                <input required class="form-control date" id="floatingInput" placeholder="Дата рождения" type="text">
                 <label for="floatingInput"><span class = 'colorSpan'>Дата рождения</span></label>
                 <p class = 'error'></p>
             </div>
@@ -67,7 +70,7 @@
                     </small>
                 </div>
             </label>
-            <button class = 'btm'>Оформить заказ</button>
+            <button id = 'btmSub' class = 'btm'>Оформить заказ</button>
             <div class="sicur">
                 <img src="./img/sicur.svg" alt="">
                 <p>Все данные надежно защищены:

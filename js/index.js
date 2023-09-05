@@ -1,6 +1,7 @@
 $(document).ready(() => {
     const pattPhone = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
     // const pattPhone = /^[0-9]+$/;
+    const pattNumber = /\d+/g;
     const pattName = /^[а-яё -]+$/i; 
     const pattEmail = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
     const pattDate = /(0[1-9]|[12][0-9]|3[01]).(0[1-9]|1[1,2]).(19|20)\d{2}/;
@@ -8,28 +9,26 @@ $(document).ready(() => {
     var reg = new RegExp(pattName)
     var email = new RegExp(pattEmail);
     var date = new RegExp(pattDate);
+    var number = new RegExp(pattNumber)
 
-    const errorName = 'Введите значение на кириллице' 
-    const errorDate= 'Некорректная дата' 
-    const errorEmail= 'Некорректная email' 
+    const errorName = 'Введите значение на кириллице'; 
+    const errorDate= 'Некорректная дата';
+    const errorEmail= 'Некорректная email'; 
 
-    let subPhone = ''
-    let subEmail = ''
-
-    const brush = (bool) =>{
-        const arr = []
-        if(bool){
-            arr = [];
-        }
-        
-    }
+    let subPhone = '';
+    let subEmail = '';
+    let subDate = '';
+    let checkbox = false;
+    
 
     $('.oferta').click(() => {
         if(!$('.oferta').hasClass('active')){
             $('.oferta').addClass('active')
+            checkbox = true;
         }
         else{
             $('.oferta').removeClass('active')
+            checkbox = false;
         }
     })
 
@@ -40,7 +39,7 @@ $(document).ready(() => {
 
     const classes = ['input.name', 'input.lastname', 'input.othe'];
     let names= ['', '', ''];
-    const ids = ['div#name', 'div#lastname', 'div#othe'];
+    const ids = ['div#lastname', 'div#name', 'div#othe'];
     
 
     for(let i = 0; i < classes.length; i++){
@@ -103,7 +102,7 @@ $(document).ready(() => {
 
             $('div#phone').css('background-color', 'green')
 
-            subPhone = $('input.phone').val();
+            subPhone = $('input.phone').val().match(number).join('');
         }
     })
 
@@ -146,22 +145,60 @@ $(document).ready(() => {
             $('input.date').css('border', '1px solid #ced4da')
 
             $('input.date').siblings('p.error').text('')
+
+            subDate= '';
         }
         else if($('input.date').val().length != 0 && !date.test($('input.date').val())){
             $('input.date').css('background-color', '#FFE7E7')
             $('input.date').css('border', '1px solid #E43232')
 
             $('input.date').siblings('p.error').text(errorDate)
+
+            subDate= '';
         }
         else{
             $('input.date').css('background-color', '#D1EEDA')
             $('input.date').css('border', '1px solid #47AA63')
 
             $('input.date').siblings('p.error').text('')
+
+            subDate= $('input.date').val();
         }
     })
 
-    
+    $('form').submit((e) => {
+
+        const data = {
+            phone: subPhone,
+            name: names[0],
+            lastName: names[1],
+            patronymic: names[2],
+            date: subDate,
+            email: subEmail,
+        }
+
+        if(data.phone && data.name && data.lastName && data.patronymic && data.date && checkbox){
+            $.ajax({
+                type: "POST",
+                url: 'http://localhost:3001/form',
+                data: data,
+                success: (result) => {
+                    console.log(result)
+                    return true
+                },
+                error: () => {
+                    console.log('Всё не тип топ')
+                }
+            })
+        }
+        else{
+            $('#btmSub').after('<p class = "btmError"> Заполните все обязательные поля </p>')
+            return false;
+        }
+
+        
+
+    })    
 
     
 })

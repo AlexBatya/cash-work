@@ -184,6 +184,12 @@ main form .btm {
   font-weight: 700;
 }
 
+main form .btmError {
+  color: red;
+  text-align: center;
+  margin: 5px 0;
+}
+
 main form .sicur {
   margin-top: 23px;
   max-width: 270px;

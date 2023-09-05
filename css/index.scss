@@ -10,6 +10,7 @@ a{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -163,6 +164,11 @@ main{
             line-height: 50px !important;
             font-size: 22px;
             font-weight: 700;
+        }
+        .btmError{
+            color: red;
+            text-align: center;
+            margin: 5px 0;
         }
         .sicur{
             margin-top: 23px;
