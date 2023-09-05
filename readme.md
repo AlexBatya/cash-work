@@ -12,7 +12,7 @@ name| Имя
 lastName| Фамилия 
 patronymic| Отчество
 date| Дата рождения
-email| почта
+email| Почта
 
 
 ### jQuery (index.js)
